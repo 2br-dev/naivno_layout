@@ -1,0 +1,23 @@
+// Fonts ==========================================================================
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oswald:wght@300;400&display=swap');
+
+// Parts ==========================================================================
+@import './parts/framework/color-variables';
+@import './parts/vars';
+@import './parts/framework/media';
+@import './parts/framework/cards';
+@import './parts/framework/color-classes';
+@import './parts/framework/grid';
+@import './parts/helpers';
+@import './parts/framework/normalize';
+@import './parts/framework/toast';
+@import './parts/framework/sidenav';
+@import './parts/framework/waves';
+@import './parts/buttons';
+@import './parts/framework/swiper_bundle';
+
+@import './parts/nav';
+@import './parts/footer';
+
+// Pages ==========================================================================
+@import './parts/pages/main';

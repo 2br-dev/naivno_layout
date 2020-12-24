@@ -1,0 +1,62 @@
+// 1. Colors
+// ==========================================================================
+
+$primary-color: #EC660B !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+$accent: $primary-color;
+$paper: #F5F5F5;
+
+// 11. Global
+// ==========================================================================
+
+// Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1900px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+// 12. Grid
+// ==========================================================================
+
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+
+// 4. Cards
+// ==========================================================================
+
+$card-padding: 24px !default;
+$card-bg-color: #fff !default;
+$card-link-color: color("orange", "accent-2") !default;
+$card-link-color-light: lighten(red, 20%) !default;
+
+// 19. Toasts
+// ==========================================================================
+
+$toast-height: 48px !default;
+$toast-color: #323232 !default;
+$toast-text-color: #fff !default;
+$toast-action-color: #eeff41;
+
+// 14. Side Navigation
+// ==========================================================================
+
+$sidenav-width: 300px !default;
+$sidenav-font-size: 14px !default;
+$sidenav-font-color: rgba(0,0,0,.87) !default;
+$sidenav-bg-color: #fff !default;
+$sidenav-padding: 16px !default;
+$sidenav-item-height: 48px !default;
+$sidenav-line-height: $sidenav-item-height !default;

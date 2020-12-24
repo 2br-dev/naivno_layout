@@ -1,0 +1,73 @@
+header{
+
+	background: #fff;
+
+	& .nav-wrapper{
+		display: flex;
+		padding: 20px 0;
+
+		.logo-wrapper{
+
+			flex-grow: 1;
+
+			& .logo{
+				display: inline-block;
+				width: 245px;
+				height: 77px;
+				background: url(../img/naivno_logo.svg);
+			}
+		}
+	}
+
+	& .menu{
+		display: flex;
+		padding: 0 20px;
+		flex-grow: 1;
+		justify-content: flex-end;
+
+		& a{
+			padding: 0 10px;
+			line-height: 74px;
+			white-space: nowrap;
+		}
+	}
+
+	& .sidenav{
+
+		& .user-view{
+
+			& .background{
+				background: url(/img/sidenav_bgr.jpg) center center no-repeat;
+				background-size: cover;
+			}
+
+			& .circle{
+				background-color: #fff;
+			}
+		}
+	}
+
+	& .cart-wrapper{
+		
+		& .btn{
+			margin: 20px 0;
+		}
+
+		& .sidenav-trigger{
+			line-height: 80px;
+			padding-left: 40px;
+			background: url(../img/burger.svg) center center no-repeat;
+			background-size: contain;
+
+			@media(min-width: 1400px){
+				display: none;
+			}
+		}
+	}
+
+	@media(max-width: 1400px){
+		& .menu, & .cart-wrapper .btn{
+			display: none;
+		}
+	}
+}
