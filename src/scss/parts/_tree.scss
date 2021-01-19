@@ -1,0 +1,150 @@
+.tree-wrapper{
+		
+    width: 280px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    overflow: hidden;
+    z-index: 20;
+    background: $paper;
+    transition: transform .4s, opacity .4s;
+
+    &.sticky-hidden{
+
+        @media(max-width: 600px){
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+
+    @media(max-width: 1000px){
+        width: 100%;
+        margin-right: 0;
+        border: 1px solid $accent;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+
+    @media(max-width: 600px){
+        position: sticky;
+        top: 90px;
+    }
+    
+    & .tree{
+
+        border-radius: 4px;
+
+        @media(max-width: 600px){
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        & .tree-trigger{
+            text-align: center;
+            padding: 5px 10px;
+            font-family: 'Oswald';
+            color: $accent;
+            font-size: 18px;
+            line-height: 40px;
+            text-transform: uppercase;
+            display: none;
+
+            @media(max-width: 1000px){
+                display: block;
+            }
+
+            & + ul{
+
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                @media(max-width: 1000px){
+                    display: none;
+
+                    &.expanded{
+                        display: initial;
+                    }
+                }
+
+                & li{
+                    display: block;
+                    margin: 0;
+                    border-top: 1px solid #ccc;
+                    transition: border-color .2s;
+                    max-width: 100%;
+                    
+                    & a{
+                        line-height: 40px;
+                        display: block;
+                        padding: 0 10px;
+                        max-height: 40px;
+                        box-sizing: border-box;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        transition: max-height .2s, background-color .2s;
+
+                        &:hover{
+                            background-color: #fff;
+                        }
+                    }
+
+                    &.folder{
+                        
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        & .folder-trigger{
+                            background: url(/img/folder_plus.svg) center center no-repeat;
+                            background-size: 16px auto;
+                            width: 40px;
+
+                            @media(max-width: 1000px){
+
+                            }
+                        }
+
+                        & :not(.folder-trigger){
+                            flex-grow: 1;
+                            padding: 0;
+                        }
+
+                        & > ul{
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    & > ul{
+
+                        &.open{
+                            border-left: 5px solid $primary;
+                        }
+                        
+                        & > li{
+                            
+                            & a{
+                                padding-left: 34px !important;
+                            }
+                        }
+                    }
+                }
+
+                & li ul:not(.open){
+
+                    & li{
+
+                        border: 0;
+
+                        & a{
+                            max-height: 0;
+                            overflow: hidden;
+                        }
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+#product{
+
+    & .content-wrapper{
+        display: flex;
+    
+        @media(max-width: 1000px){
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.breadcrumbs{
+
+    line-height: 40px;
+
+    & a{
+        color: $fogged;
+
+        &:hover{
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 1px;
+        }
+    }
+
+    & span{
+        color: lighten($fogged, 20);
+    }
+}

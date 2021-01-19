@@ -7,16 +7,18 @@ $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 $accent: $primary-color;
 $paper: #F5F5F5;
+$primary: #3D82BD;
+$fogged: #8e8e8e;
 
 // 11. Global
 // ==========================================================================
 
 // Media Query Ranges
 $small-screen-up: 601px !default;
-$medium-screen-up: 993px !default;
-$large-screen-up: 1201px !default;
+$medium-screen-up: 1403px !default;
+$large-screen-up: 1901px !default;
 $small-screen: 600px !default;
-$medium-screen: 992px !default;
+$medium-screen: 1402px !default;
 $large-screen: 1900px !default;
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;

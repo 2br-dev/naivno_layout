@@ -6,19 +6,28 @@ $(() => {
 	$('p, li, ol').hyphenate();
 	$('body').on('click', '.author', openAuthor);
 	$('body').on('click', '.author-expanded .close', closeAuthor);
+	$('body').on('click', '.folder-trigger', toggleFolder);
+	$('body').on('click', '.tree-trigger', toggleTree);
 	$(window).on('resize', updateAuthorPopup);
+	$('html, body').on('mousewheel', updateTreeTrigger);
 
 	fill_authors();
+	fillProducts();
+
 	initSlider();
 	$('.sidenav').sidenav();
 });
 
+
+// AUTHORS SECTION ========================================
 function closeAuthor(e){
 	e.preventDefault();
 	$('.author-expanded').removeClass('open');
 }
-
 function updateAuthorPopup(){
+
+	if(!$('.author-expanded').length)
+		return;
 
 	var anchorId = $('.author-expanded').data('anchor');
 	var anchoredAuthor = anchorId ? $('.author[data-id="'+anchorId+'"]')[0] : $('.author[data-id]')[0];
@@ -58,7 +67,6 @@ function updateAuthorPopup(){
 
 
 }
-
 function openAuthor(e, author2open = null){
 
 	var id = $(this).data('id');
@@ -82,7 +90,6 @@ function openAuthor(e, author2open = null){
 		}, 220);
 	}
 }
-
 function setData(author){
 	$('.author-expanded .photo').css({
 		backgroundImage: 'url('+author.img+')'
@@ -94,13 +101,6 @@ function setData(author){
 	$('.author-expanded').addClass('open');
 	updateAuthorPopup();
 }
-
-function initSlider(){
-	heroSlider = new Swiper('.swiper-container', {
-
-	});
-}
-
 function fill_authors(){
 	$.ajax({
 		url: "/data/authors.json",
@@ -122,6 +122,73 @@ function fill_authors(){
 	})
 }
 
+// PRODUCTS SECTION (ЗАГРУЗКА РЫБЫ – можно удалить)
+function fillProducts(){
+	$.ajax({
+		url: "/data/products.json",
+		dataType: "json",
+		success: response => {
+
+			var tpl = `
+			<div class="col xl3 l4 m6 s12">
+				<div class="card hoverable" data-id="[+0+]">
+					<div class="card-image">
+						<div class="lazy-image product-image" data-src="[+1+]">
+							<a href="[+2+]" class="waves-effect waves-light">На страницу<br>товара</a>
+						</div>
+					</div>
+					<div class="card-content">
+						<div class="card-header">[+3+]</div>
+					</div>
+					<div class="card-footer">
+						<span class="price">[+4+]</span>
+						<a href="">
+							<img src="/img/cart_accent.svg">
+						</a>
+					</div>
+				</div>
+			</div>`;
+
+			$(response.products).each((index, product) => {
+
+				var card = tpl
+					.replaceAll("[+0+]", product.id)
+					.replaceAll("[+1+]", product.image)
+					.replaceAll("[+2+]", product.url)
+					.replaceAll("[+3+]", product.description)
+					.replaceAll("[+4+]", product.price);
+				
+				$('#products-wrapper').append(card);
+				fillImages();
+			});
+		},
+		error: error => {
+			console.log(error);
+		}
+	})
+}
+
+// MISC FUNCTIONS ======================================
+function updateTreeTrigger(e){
+	var delta = e.originalEvent.deltaY;
+
+	var tree_wrapper = e.originalEvent.path.filter((selector) => {
+		return $(selector).hasClass('tree-wrapper');
+	})
+
+	if(!tree_wrapper.length){
+		if(delta > 0){
+			$('.tree-wrapper').addClass('sticky-hidden');
+		}else{
+			$('.tree-wrapper').removeClass('sticky-hidden');
+		}
+	}
+}
+function initSlider(){
+	heroSlider = new Swiper('.swiper-container', {
+
+	});
+}
 function fillImages(){
 	$('.lazy-image').each((index, el) => {
 		var src = $(el).data('src');
@@ -132,4 +199,21 @@ function fillImages(){
 			})
 		}
 	})
+}
+function toggleTree(e){
+	e?.preventDefault();
+
+	$(this).next().toggleClass('expanded');
+}
+function toggleFolder(e){
+	e.preventDefault();
+
+	var expandedClass = 'open';
+	var ul = $(this).parent().find('ul');
+	var already = ul.hasClass(expandedClass);
+	var newClass = already ? '' : expandedClass
+	$('.tree-wrapper ul').removeClass(expandedClass);
+	ul.addClass(newClass);
+	
+	
 }

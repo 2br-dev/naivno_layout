@@ -17,7 +17,11 @@
 @import './parts/framework/swiper_bundle';
 
 @import './parts/nav';
+@import './parts/tree';
 @import './parts/footer';
+@import './parts/breadcrumbs';
 
 // Pages ==========================================================================
 @import './parts/pages/main';
+@import './parts/pages/products';
+@import './parts/pages/product';
