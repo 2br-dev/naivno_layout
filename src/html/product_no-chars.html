@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Страница продукции"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<div class="global-wrapper" id="product">
+		<div class="container">
+			<div class="content-wrapper">
+				<div class="tree-wrapper">
+					@@include('./parts/tree.html')
+				</div>
+				<div class="catalog-wrapper">
+					<div class="row">
+						<div class="col s12">
+							<div class="breadcrumbs">
+								<a href="">Каталог</a>
+								<span class="separator">›</span>
+								<a href="">Главная</a>
+								<span class="separator">›</span>
+								<a href="">Футболки</a>
+								<span class="separator">›</span>
+								<a href="" >Футболки взрослые</a>
+							</div>
+						</div>
+						<div class="col s12">
+							<div class="product-top">
+								<div class="image-wrapper">
+									<div class="lazy-image contains product-image" data-src="/img/product_quarantine.png"></div>
+								</div>
+								<div class="assemble-wrapper">
+									<h1>Карантинка (электронная открытка) "Ты меня ждёшь"</h1>
+									<p>Автор: <a class="underlined" href="/author.html">Роман Горшанин</a></p>
+									<div class="btn-wrapper">
+										<a href="" class="btn accent">Сохранить</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+                        <div class="col s12 m8 l8">
+							<div class="lined-block">Описание</div>
+							<div class="description">
+                                Выбирайте, что вам сейчас по настроению! <br>
+                                Мы дарим их вам! <br>
+                                А вы дарите их своим друзьям и близким! <br>
+                                И улыбайтесь чаще))) <br>
+                                Хорошее настроение укрепляет иммунитет!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('./parts/sidenav.html')
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

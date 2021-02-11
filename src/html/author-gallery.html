@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+@@include('./parts/head.html', {title: "Галерея — Роман Горшенин"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<div class="global-wrapper" id="gallery">
+		<div class="container">
+            <div class="row flex">
+                <div class="col s12">
+                    <h1>Галерея Романа Горшенина</h1>
+                </div>
+				@@loop('./parts/gallery-entry.html', './data/author-gallery.json')
+            </div>
+		</div>
+	</div>
+	@@include('./parts/sidenav.html')
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

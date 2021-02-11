@@ -1,0 +1,41 @@
+#diary{
+
+    & .row{
+        display: flex;
+        flex-wrap: wrap;
+        
+        & .col{
+            height: 100%;
+        }
+    }
+    
+    & .gallery-entry{
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        & .gallery-image{
+            position: relative;
+            padding-top: 65%;
+
+            & .date{
+                position: absolute;
+                top: 20px;
+                right: 0px;
+                padding: 0 15px;
+                line-height: 25px;
+                background: $paper;
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+                font-size: 12px;
+            }
+        }
+
+        & .title{
+            font-weight: 800;
+            padding-top: 20px;
+            font-size: 18px;
+        }
+    }
+}

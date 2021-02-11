@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"image": "/img/hero-t-shirt.png",
+		"url": "/product_full.html",
+		"description": "Свитшот «Секретный ангел» (женский вариант) с русским текстом",
+		"price": "2000₽"
+	},
+	{
+		"id": 2,
+		"image": "/img/product_quarantine.png",
+		"url": "/product_no-chars.html",
+		"description": "Свитшот «Секретный ангел» (женский вариант) с русским текстом",
+		"price": "2000₽"
+	},
+	{
+		"id": 3,
+		"image": "/img/product-cup.png",
+		"url": "/product_no-sizes.html",
+		"description": "Кружка кофейная «Хризантемы»",
+		"price": "2000₽"
+	},
+	{
+		"id": 4,
+		"image": "/img/product-pillow.png",
+		"url": "/product_no-description.html",
+		"description": "Подушка с принтом «Ниф-Ниф»",
+		"price": "2000₽"
+	}
+]

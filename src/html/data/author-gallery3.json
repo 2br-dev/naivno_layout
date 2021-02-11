@@ -1,0 +1,20 @@
+[
+    {
+        "image": "/img/gallery/gorshenin/1.jpg",
+        "title": "Пушкин на набережной",
+        "link": "javascript:void(0)",
+        "class": "materialboxed"
+    },
+    {
+        "image": "/img/gallery/gorshenin/2.jpg",
+        "title": "Пушкин с персиками",
+        "link": "javascript:void(0)",
+        "class": "materialboxed"
+    },
+    {
+        "image": "/img/gallery/gorshenin/3.jpg",
+        "title": "Портрет сестры",
+        "link": "javascript:void(0)",
+        "class": "materialboxed"
+    }
+]

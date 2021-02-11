@@ -1,27 +1,24 @@
 // Fonts ==========================================================================
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Oswald:wght@300;400;700&display=swap');
 
 // Parts ==========================================================================
-@import './parts/framework/color-variables';
-@import './parts/vars';
-@import './parts/framework/media';
-@import './parts/framework/cards';
-@import './parts/framework/color-classes';
-@import './parts/framework/grid';
-@import './parts/helpers';
-@import './parts/framework/normalize';
-@import './parts/framework/toast';
-@import './parts/framework/sidenav';
-@import './parts/framework/waves';
-@import './parts/buttons';
-@import './parts/framework/swiper_bundle';
+@import './framework/materialize';
+@import './framework/swiper_bundle';
 
+@import './parts/vars';
+@import './parts/helpers';
+@import './parts/buttons';
 @import './parts/nav';
 @import './parts/tree';
 @import './parts/footer';
 @import './parts/breadcrumbs';
+@import './parts/product-card';
 
-// Pages ==========================================================================
-@import './parts/pages/main';
-@import './parts/pages/products';
-@import './parts/pages/product';
+// // Pages ==========================================================================
+@import './pages/main';
+@import './pages/products';
+@import './pages/product';
+@import './pages/authors';
+@import './pages/author';
+@import './pages/diary';
+@import './pages/contacts';

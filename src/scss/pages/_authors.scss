@@ -1,0 +1,17 @@
+#authors{
+
+    & .author{
+        display: block;
+        padding-top: calc(70% - 40px);
+        width: 100%;
+
+        & .name{
+            background-color: rgba(white, .8);
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            line-height: 40px;
+            padding: 0 10px;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+#contacts{
+
+
+    & .lazy-image{
+        background: #ccc;
+        padding-top: 65%;
+        margin-bottom: 30px;
+
+        &.art-play{
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+
+        &.map{
+            display: block;
+            background-position: center;
+            box-shadow: 0 0 0 1px #ccc inset, 0 0 4px rgba(black, .4) inset;
+            transition: box-shadow .3s;
+            
+            &:hover{
+                box-shadow: 0 0 0 1px #ccc inset, 0 0 8px rgba(black, .7) inset;
+            }
+        }
+    }
+
+    & .kv-pair{
+        display: table-row;
+
+        & .key, & .value{
+            display: table-cell;
+        }
+
+        & .key{
+            font-weight: 700;
+            width: 35%;
+        }
+
+        @media(max-width: 600px){
+            display: block;
+            margin-bottom: 20px;
+
+            & .key{
+                width: 100%;
+            }
+
+            & .key, & .value{
+                display: block;
+            }
+        }
+    }
+}

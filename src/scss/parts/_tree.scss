@@ -1,6 +1,6 @@
 .tree-wrapper{
 		
-    width: 280px;
+    width: 240px;
     flex-shrink: 0;
     margin-right: 20px;
     overflow: hidden;
@@ -20,7 +20,7 @@
     @media(max-width: 1000px){
         width: 100%;
         margin-right: 0;
-        border: 1px solid $accent;
+        box-shadow: 0 0 0 1px $accent;
         border-radius: 6px;
         margin-bottom: 20px;
     }
@@ -84,10 +84,10 @@
                         text-overflow: ellipsis;
                         overflow: hidden;
                         transition: max-height .2s, background-color .2s;
+                    }
 
-                        &:hover{
-                            background-color: #fff;
-                        }
+                    &:hover{
+                        background-color: #fff;
                     }
 
                     &.folder{

@@ -1,0 +1,15 @@
+#author{
+
+    & .author-left, & .author-right{
+        padding-top: 65%;
+    }
+    
+    & .gallery-entry{
+
+        margin-bottom: 30px;
+        
+        & .lazy-image{
+            padding-top: 65%;
+        }
+    }
+}
