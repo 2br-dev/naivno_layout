@@ -2,16 +2,33 @@
 	
 	#hero{
    
-		background: url(../img/rough/top_white.svg) top center repeat-x;
 		position: relative;
+		background: #f5f5f5;
+
+		& .container{
+			mix-blend-mode: darken;
+		}
+
+		&:before{
+			content:'';
+			position: absolute;
+			width: 100%;
+			z-index: 0;
+			height: 60px;
+			background: url(../img/rough/top_white.svg) top center repeat-x;
+		}
 		
 		& .swiper-container{
-			
+		
 			& .swiper-slide{
 				
 				height: 34vw;
 				min-height: 380px;
 				display: flex;
+
+				@media(min-width: 2000px){
+					height: 30vw;
+				}
 	
 				& .data{
 					display: flex;
@@ -90,11 +107,14 @@
 	
 				& .image{
 					width: 55%;
+					// background-color: #F5F5F5;
+					mix-blend-mode: multiply;
 	
 					& .lazy-image{
 						height: 100%;
 						box-sizing: border-box;
 						background-position: top center;
+						mix-blend-mode: darken;
 					}
 				}
 	

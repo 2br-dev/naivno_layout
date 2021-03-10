@@ -108,9 +108,10 @@ function updateTreeTrigger(e){
 	}
 }
 function initSlider(){
-	heroSlider = new Swiper('.swiper-container', {
-
-	});
+	heroSlider = new Swiper('.swiper-container', {});
+	heroSlider.on('slideChange', () => {
+		loadImages();
+	})
 }
 function toggleTree(e){
 	e.preventDefault();
