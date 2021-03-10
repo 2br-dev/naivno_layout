@@ -35,7 +35,7 @@ gulp.task('html', function(){
 
 gulp.task('js', function(){
 	return gulp.src('./src/js/*.js')
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(order([
 			"jquery.lazy.js",
 			"materialize.js",
