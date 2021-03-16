@@ -22928,17 +22928,23 @@ function openAuthor(e, author2open = null){
 		}, 220);
 	}
 }
+
 function setData(author){
 	$('.author-expanded .photo').css({
-		backgroundImage: 'url('+author.img+')'
+	  backgroundImage: 'url('+author.img+')'
 	});
-	$('.author-expanded .description').text(author.description != "" ? author.description : "Описание пока отсутствует");
+	$('.author-expanded .description').html(author.description != "" ? author.description : "Описание пока отсутствует");
 	$('.author-expanded .profile').attr('href', author.about_link);
-	$('.author-expanded .gallery').attr('href', author.gallery_link);
+	if(author.gallery_link){
+		  $('.author-expanded .gallery').removeClass('hidden').attr('href', author.gallery_link);
+	  }else {
+		  $('.author-expanded .gallery').addClass('hidden');
+	  }
+  
 	$('.author-expanded .name').text(author.name);
 	$('.author-expanded').addClass('open');
 	updateAuthorPopup();
-}
+  }
 
 function brand(){
     console.log(`

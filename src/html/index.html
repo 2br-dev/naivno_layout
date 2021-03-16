@@ -12,8 +12,8 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="data">
-								<div class="name">T-shirt</div>
-								<div class="sub">новая коллекция</div>
+								<div class="name">Новинки</div>
+								<div class="sub">футболка «ночная жизнь Патрика – 04:10»</div>
 								<div class="chars">
 									<div class="char">
 										<div class="key"><span class="expanded">авторский</span> рисунок</div>
@@ -191,70 +191,8 @@
 					<div class="col s12 center-align">
 						<h2>Каталог продукции</h2>
 					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/pillows.png"></div>
-								<a href="/products.html" class="link">Подушки</a>
-							</div>
-						</div>
-					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/magnets.png"></div>
-								<a href="/products.html" class="link">Магниты</a>
-							</div>
-						</div>
-					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/sweat-shirts.png"></div>
-								<a href="/products.html" class="link">Свитшоты</a>
-							</div>
-						</div>
-					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/badges.png"></div>
-								<a href="/products.html" class="link">Значки</a>
-							</div>
-						</div>
-					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/t-shirts.png"></div>
-								<a href="/products.html" class="link">Футболки</a>
-							</div>
-						</div>
-					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/bags.png"></div>
-								<a href="/products.html" class="link">Сумки</a>
-							</div>
-						</div>
-					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/books.png"></div>
-								<a href="/products.html" class="link">Книги</a>
-							</div>
-						</div>
-					</div>
-					<div class="col xl3 l4 m6 s12">
-						<div class="card">
-							<div class="card-content">
-								<div class="lazy-image quadro contains" data-src="/img/main_catalog/cups.png"></div>
-								<a href="/products.html" class="link">Кружки</a>
-							</div>
-						</div>
-					</div>
+					@@loop('./parts/catalog-entry.html', './data/catalog.json')
+
 				</div>
 				<div class="row">
 					<div class="col s12 center-align"><a href="" class="btn accent">Весь каталог</a></div>

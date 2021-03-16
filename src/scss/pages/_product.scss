@@ -31,6 +31,7 @@
 
     & .product-image{
         padding-top: 100%;
+        mix-blend-mode: darken;
     }
 
     & .kv-wrapper{
@@ -54,6 +55,43 @@
         }
     }
 
+    & .price-count{
+
+        display: flex;
+        margin-bottom: 20px;
+
+        & .price{
+            flex-grow: 1;
+            padding-top: 24px;
+            white-space: nowrap;
+            
+            & .price-val{
+                font-size: 25px;
+                font-family: Oswald;
+                color: $fogged;
+            }
+        }   
+    }
+
+    
+    & .input-field{
+
+        margin: 0 10px;
+
+        & input[type="number"]{
+            margin-top: 13px;
+            width: 40px;
+            font-size: 26px;
+            font-family: Oswald;
+            border: 0;
+            border-bottom: 1px solid black;
+            line-height: 45px;
+            background: transparent;
+            text-align: center;
+            appearance: none;
+        }
+    }
+
     & .counter{
 
         display: flex;
@@ -63,36 +101,6 @@
         & .dropdown-container{
             min-width: 120px;
             flex-grow: 1;
-        }
-
-        & .input-field{
-
-            margin: 0 10px;
-
-            & input[type="number"]{
-                margin-top: 13px;
-                width: 40px;
-                font-size: 26px;
-                font-family: Oswald;
-                border: 0;
-                border-bottom: 1px solid black;
-                line-height: 45px;
-                background: transparent;
-                text-align: center;
-                appearance: none;
-            }
-        }
-
-        & .price{
-            flex-grow: 1;
-            padding-top: 20px;
-            white-space: nowrap;
-            
-            & .price-val{
-                font-size: 26px;
-                font-family: Oswald;
-                color: $fogged;
-            }
         }
         
         & .btn-wrapper{

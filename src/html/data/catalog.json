@@ -1,0 +1,34 @@
+[
+    {
+        "image": "/img/main_catalog/pillows.png",
+        "title": "Подушки"
+    },
+    {
+        "image": "/img/main_catalog/magnets.png",
+        "title": "Магниты"
+    },
+    {
+        "image": "/img/main_catalog/sweat-shirts.png",
+        "title": "Свитшоты"
+    },
+    {
+        "image": "/img/main_catalog/badges.png",
+        "title": "Значки"
+    },
+    {
+        "image": "/img/main_catalog/t-shirts.png",
+        "title": "Футболки"
+    },
+    {
+        "image": "/img/main_catalog/bags.png",
+        "title": "Сумки"
+    },
+    {
+        "image": "/img/main_catalog/books.png",
+        "title": "Книги"
+    },
+    {
+        "image": "/img/main_catalog/cups.png",
+        "title": "Кружки"
+    }
+]

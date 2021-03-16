@@ -13,7 +13,7 @@
         border-bottom-left-radius: 50%;
         border-bottom-right-radius: 50%;
         position: relative;
-        background-size: auto 80%;
+        background-size: auto 90%;
         
         & a{
             border-bottom-left-radius: 50%;
@@ -42,7 +42,7 @@
     }
 
     & .card-content{
-        padding: 20px;
+        padding: 10px 20px;
     }
 
     & .card-footer{
@@ -53,7 +53,7 @@
         & .price{
             display: inline-block;
             flex-grow: 1;
-            padding: 10px;
+            padding: 10px 20px;
             font-weight: 700;
             line-height: 30px;
             font-size: 20px;
