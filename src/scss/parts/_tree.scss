@@ -25,19 +25,19 @@
         margin-bottom: 20px;
     }
 
-    // @media(max-width: 600px){
-    //     position: sticky;
-    //     top: 90px;
-    // }
+    @media(max-width: 600px){
+        position: sticky;
+        top: 90px;
+    }
     
     & .tree{
 
         border-radius: 4px;
 
-        // @media(max-width: 600px){
-        //     max-height: calc(100vh - 120px);
-        //     overflow-y: auto;
-        // }
+        @media(max-width: 600px){
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
 
         & .tree-trigger{
             text-align: center;
@@ -111,7 +111,7 @@
                         flex-wrap: wrap;
 
                         & .folder-trigger{
-                            background: url(/img/folder_plus.svg) center center no-repeat;
+                            background: url(../img/folder_plus.svg) center center no-repeat;
                             background-size: 16px auto;
                             width: 40px;
 

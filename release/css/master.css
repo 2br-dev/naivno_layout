@@ -4532,7 +4532,7 @@ header {
       position: sticky;
       top: 0;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      z-index: 10; } }
+      z-index: 200; } }
   header .nav-wrapper {
     display: flex;
     padding: 20px 0; }
@@ -4580,7 +4580,7 @@ header {
       display: none; } }
 
 .sidenav .user-view .background {
-  background: url(/img/sidenav_bgr.jpg) center center no-repeat;
+  background: url(../img/sidenav_bgr.jpg) center center no-repeat;
   background-size: cover; }
 
 .sidenav .user-view .circle {
@@ -4606,8 +4606,16 @@ header {
       box-shadow: 0 0 0 1px #ee6e73;
       border-radius: 6px;
       margin-bottom: 20px; } }
+  @media (max-width: 600px) {
+    .tree-wrapper {
+      position: sticky;
+      top: 90px; } }
   .tree-wrapper .tree {
     border-radius: 4px; }
+    @media (max-width: 600px) {
+      .tree-wrapper .tree {
+        max-height: calc(100vh - 120px);
+        overflow-y: auto; } }
     .tree-wrapper .tree .tree-trigger {
       text-align: center;
       padding: 5px 10px;
@@ -4655,7 +4663,7 @@ header {
             display: flex;
             flex-wrap: wrap; }
             .tree-wrapper .tree .tree-trigger + ul li.folder .folder-trigger {
-              background: url(/img/folder_plus.svg) center center no-repeat;
+              background: url(../img/folder_plus.svg) center center no-repeat;
               background-size: 16px auto;
               width: 40px; }
             .tree-wrapper .tree .tree-trigger + ul li.folder :not(.folder-trigger) {
@@ -4865,7 +4873,7 @@ footer.page-footer {
   background: #E1E1E1;
   padding: 40px 0;
   position: relative;
-  background-image: url(/img/about_project.png);
+  background-image: url(../img/about_project.png);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: bottom 20px left 40vw; }
@@ -4917,7 +4925,7 @@ footer.page-footer {
 
 #main #authors {
   background-color: #2F618F;
-  background-image: url(/img/authors.png);
+  background-image: url(../img/authors.png);
   background-position: bottom 30px right 30px;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -4929,14 +4937,14 @@ footer.page-footer {
     content: '';
     display: block;
     height: 50px;
-    background: url(/img/rough/top_grey.svg) top center repeat-x;
+    background: url(../img/rough/top_grey.svg) top center repeat-x;
     position: relative;
     top: -50px; }
   #main #authors:after {
     content: '';
     display: block;
     height: 50px;
-    background: url(/img/rough/bottom_white.svg) bottom center repeat-x;
+    background: url(../img/rough/bottom_white.svg) bottom center repeat-x;
     position: relative;
     top: 100px; }
   #main #authors #authors-container {
@@ -5024,7 +5032,7 @@ footer.page-footer {
         display: block;
         width: 100%;
         height: 100%;
-        background: url(/img/close.svg) center center no-repeat; }
+        background: url(../img/close.svg) center center no-repeat; }
     @media (max-width: 600px) {
       #main #authors .author-expanded {
         flex-direction: column; }
@@ -5033,7 +5041,7 @@ footer.page-footer {
 
 #main #press {
   background-color: #fff;
-  background-image: url(/img/press.png);
+  background-image: url(../img/press.png);
   background-position: left 5vw center;
   background-repeat: no-repeat;
   padding: 80px 0; }
@@ -5053,7 +5061,7 @@ footer.page-footer {
 #main #coop {
   padding: 80px 0;
   background-color: #5C5C5C;
-  background-image: url(/img/coop.png);
+  background-image: url(../img/coop.png);
   background-position: bottom 30px right 30px;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -5062,7 +5070,7 @@ footer.page-footer {
     content: '';
     display: block;
     height: 50px;
-    background: url(/img/rough/top_white.svg) bottom center repeat-x;
+    background: url(../img/rough/top_white.svg) bottom center repeat-x;
     position: relative;
     top: -85px; }
   #main #coop form {
@@ -5147,10 +5155,21 @@ footer.page-footer {
     display: flex;
     flex-direction: column;
     max-width: 400px; }
+    #product .product-top .assemble-wrapper .assemble {
+      display: flex; }
+      #product .product-top .assemble-wrapper .assemble .counter {
+        margin-right: 20px; }
     #product .product-top .assemble-wrapper:before, #product .product-top .assemble-wrapper:after {
       content: '';
       display: block;
       flex-grow: 1; }
+  #product .product-top .price-wrapper {
+    display: flex; }
+    #product .product-top .price-wrapper .price-count {
+      padding-right: 20px;
+      flex-grow: 1; }
+    #product .product-top .price-wrapper .btn-wrapper {
+      padding-top: 20px; }
 
 #product .product-image {
   padding-top: 100%;
@@ -5199,7 +5218,7 @@ footer.page-footer {
   flex-wrap: wrap;
   justify-content: center; }
   #product .counter .dropdown-container {
-    min-width: 120px;
+    min-width: 140px;
     flex-grow: 1; }
   #product .counter .btn-wrapper {
     padding-top: 20px;
@@ -5214,16 +5233,24 @@ footer.page-footer {
   margin: 10px 0;
   max-width: 300px; }
   #product .color-selector .colors-wrapper .color {
-    border: 3px solid #fff;
     display: inline-block;
     width: 22px;
     height: 22px;
-    border-radius: 50%;
-    transition: box-shadow .2s, border-color .2s; }
-    #product .color-selector .colors-wrapper .color.current {
-      border-color: #ee6e73; }
-    #product .color-selector .colors-wrapper .color:hover {
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); }
+    border-radius: 50%; }
+    #product .color-selector .colors-wrapper .color input {
+      display: none; }
+      #product .color-selector .colors-wrapper .color input + label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition: box-shadow .2s, border-color .2s;
+        border: 3px solid #fff;
+        cursor: pointer; }
+      #product .color-selector .colors-wrapper .color input:checked + label {
+        border-color: #ee6e73; }
+      #product .color-selector .colors-wrapper .color input + label:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); }
 
 #authors .author {
   display: block;
@@ -5305,3 +5332,8 @@ footer.page-footer {
         width: 100%; }
       #contacts .kv-pair .key, #contacts .kv-pair .value {
         display: block; } }
+
+#about .lazy-image {
+  padding-top: 65%;
+  background-size: cover;
+  background-position: center; }

@@ -2429,7 +2429,7 @@ body {
     display: block;
     margin-bottom: 30px;
     height: 57px;
-    background: url(/img/rough/top_white.svg) top center;
+    background: url(../img/rough/top_white.svg) top center;
     background-repeat: repeat-x; }
     @media (max-width: 600px) {
       body .global-wrapper:not(#main):before {
@@ -3968,7 +3968,7 @@ header {
       display: none; } }
 
 .sidenav .user-view .background {
-  background: url(/img/sidenav_bgr.jpg) center center no-repeat;
+  background: url(../img/sidenav_bgr.jpg) center center no-repeat;
   background-size: cover; }
 
 .sidenav .user-view .circle {
@@ -4047,7 +4047,7 @@ header {
             display: flex;
             flex-wrap: wrap; }
             .tree-wrapper .tree .tree-trigger + ul li.folder .folder-trigger {
-              background: url(/img/folder_plus.svg) center center no-repeat;
+              background: url(../img/folder_plus.svg) center center no-repeat;
               background-size: 16px auto;
               width: 40px; }
             .tree-wrapper .tree .tree-trigger + ul li.folder :not(.folder-trigger) {
@@ -4230,7 +4230,7 @@ footer.page-footer {
   background: #E1E1E1;
   padding: 40px 0;
   position: relative;
-  background-image: url(/img/about_project.png);
+  background-image: url(../img/about_project.png);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: bottom 20px left 40vw; }
@@ -4272,7 +4272,7 @@ footer.page-footer {
 
 #main #authors {
   background-color: #2F618F;
-  background-image: url(/img/authors.png);
+  background-image: url(../img/authors.png);
   background-position: bottom 30px right 30px;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -4284,14 +4284,14 @@ footer.page-footer {
     content: '';
     display: block;
     height: 50px;
-    background: url(/img/rough/top_grey.svg) top center repeat-x;
+    background: url(../img/rough/top_grey.svg) top center repeat-x;
     position: relative;
     top: -50px; }
   #main #authors:after {
     content: '';
     display: block;
     height: 50px;
-    background: url(/img/rough/bottom_white.svg) bottom center repeat-x;
+    background: url(../img/rough/bottom_white.svg) bottom center repeat-x;
     position: relative;
     top: 100px; }
   #main #authors #authors-container {
@@ -4379,7 +4379,7 @@ footer.page-footer {
         display: block;
         width: 100%;
         height: 100%;
-        background: url(/img/close.svg) center center no-repeat; }
+        background: url(../img/close.svg) center center no-repeat; }
     @media (max-width: 600px) {
       #main #authors .author-expanded {
         flex-direction: column; }
@@ -4388,7 +4388,7 @@ footer.page-footer {
 
 #main #press {
   background-color: #fff;
-  background-image: url(/img/press.png);
+  background-image: url(../img/press.png);
   background-position: left 5vw center;
   background-repeat: no-repeat;
   padding: 80px 0; }
@@ -4408,7 +4408,7 @@ footer.page-footer {
 #main #coop {
   padding: 80px 0;
   background-color: #5C5C5C;
-  background-image: url(/img/coop.png);
+  background-image: url(../img/coop.png);
   background-position: bottom 30px right 30px;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -4417,7 +4417,7 @@ footer.page-footer {
     content: '';
     display: block;
     height: 50px;
-    background: url(/img/rough/top_white.svg) bottom center repeat-x;
+    background: url(../img/rough/top_white.svg) bottom center repeat-x;
     position: relative;
     top: -85px; }
   #main #coop form {
