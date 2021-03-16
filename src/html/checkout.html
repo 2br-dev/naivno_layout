@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+@@include('./parts/head.html', {title: "О проекте"})
+</head>
+<body>
+	@@include('./parts/header.html')
+    <div class="global-wrapper" id="checkout-wrapper">
+        <div class="container">
+            <form class="row">
+                <div class="col s12">
+                    <div class="underline-wrapper">
+                        <h1>Корзина</h1>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s12">
+
+                            <div class="underline-wrapper">
+                                <h2>Состав корзины</h2>
+                            </div>
+                            <table class="material-table responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th>Наименование</th>
+                                        <th>Количество</th>
+                                        <th>Цена за единицу</th>
+                                        <th>Сумма</th>
+                                        <th class="right-align">Действия</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="order">
+                                        <td><a class="underlined" href="product.html">Свитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+                                        <td>
+                                            <div class="add-cart">
+                                                <div class="plus">
+                                                    <a>–</a>
+                                                </div>
+                                                <input type="number" value="1" />
+                                                <div class="minus">
+                                                    <a>+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>120₽</td>
+                                        <td>240₽</td>
+                                        <td class="right-align">
+                                            <a class="mdi mdi-delete"></a>
+                                        </td>
+                                    </tr>
+                                    <tr class="order">
+                                        <td><a class="underlined" href="product.html">Свитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+                                        <td>
+                                            <div class="add-cart">
+                                                <div class="plus">
+                                                    <a>–</a>
+                                                </div>
+                                                <input type="number" value="1" />
+                                                <div class="minus">
+                                                    <a>+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>120₽</td>
+                                        <td>240₽</td>
+                                        <td class="right-align">
+                                            <a class="mdi mdi-delete"></a>
+                                        </td>
+                                    </tr>
+                                    <tr class="order">
+                                        <td><a class="underlined" href="product.html">Свитшот «Секретный ангел» (женский вариант) с русским текстом</a></td>
+                                        <td>
+                                            <div class="add-cart">
+                                                <div class="plus">
+                                                    <a>–</a>
+                                                </div>
+                                                <input type="number" value="1" />
+                                                <div class="minus">
+                                                    <a>+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>120₽</td>
+                                        <td>240₽</td>
+                                        <td class="right-align">
+                                            <a class="mdi mdi-delete"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="row">
+                <div class="col s12 right-align">
+                    <div>
+                        К оплате: 240₽
+                    </div>
+                </div>
+                <div class="col l3 m4 s12">
+                    <div class="underline-wrapper">
+                        <h2>Профиль</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col l12 s12">
+                            <div class="input-field"><input type="text" class="styled" placeholder="Фамилия, Имя, Отчество"></div>
+                        </div>
+                        <div class="col l12 s12">
+                            <div class="input-field"><input type="text" class="styled" placeholder="E-mail"></div>
+                        </div>
+                        <div class="col l12 s12">
+                            <div class="input-field"><input type="phone" class="styled" placeholder="Телефон"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <a class="btn">Авторизоваться</a>
+                        </div>
+                        <!-- <div class="col m12 s12">
+                            <input type="radio" name="user-type" id="phisical" checked class="styled">
+                            <label for="phisical">Физическое лицо</label>
+                            <input type="radio" name="user-type" id="law" class="styled">
+                            <label for="law">Юридическое лицо</label>
+                        </div> -->
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col s12">
+                            <div><input type="radio" name="password-set" class="set-password-trigger styled" id="password-auto" checked><label for="password-auto">Сгенерировать пароль</label></div>
+                            <div><input type="radio" name="password-set" class="set-password-trigger styled" id="password-manual"><label for="password-manual">Задать пароль вручную</label></div>
+                        </div>
+                    </div>
+                    <div class="row" id="set-password">
+                        <div class="col m6 s6">
+                            <div class="input-field"><input type="password" class="styled" placeholder="Пароль"><label for="">Пароль</label></div>
+                        </div>
+                        <div class="col m6 s6">
+                            <div class="input-field"><input type="password" class="styled" placeholder="Подтверждение"><label for="">Подтверждение</label></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <a href="javascript:void(0);" class="btn float-right waves-effect waves-light">Сохранить</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col l9 m8 s10">
+                    <div class="underline-wrapper">
+                        <h2>Доставка и оплата</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col l9 m7 s12">
+                            <h3>Адрес</h3>
+                            <div class="checkout_changeRegionButton rs-checkout_changeRegionButton">
+                                <img width="14" src="/img/map_marker.svg" class="map-marker">
+                                <span>Анапа</span>
+                                <a class="small underlined">изменить</a>
+                            </div>
+                            <div class="address-list">
+                                <div><input type="radio" class="styled" value="address1" name="address" checked id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
+                                <div><input type="radio" class="styled" value="address2" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
+                                <div><input type="radio" class="styled" value="address3" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>
+                                <div><input type="radio" class="styled" value="user-address" name="address" id="addr4"><label for="addr4">Другое</label></div>
+                                <div class="input-field hidden" id="user-address"><input type="text" class="styled" placeholder="Адрес"></div>
+                            </div>
+                        </div>
+                        <div class="col l3 m5 s12">
+                            <h3>Оплата</h3>
+                            <div><input checked type="radio" class="styled" name="payment-type" id="pay1"><label for="pay1">Наличными курьеру</label></div>
+                            <div><input type="radio" class="styled" name="payment-type" id="pay2"><label for="pay2">Картой онлайн</label></div>
+                            <div><input type="radio" class="styled" name="payment-type" id="pay3"><label for="pay3">Оплата по счету</label></div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field"><textarea placeholder="Комментарий к заказу" name="" id="" cols="30" rows="10" class="styled"></textarea></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <a class="btn">Офомить заказ</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+	@@include('./parts/sidenav.html')
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

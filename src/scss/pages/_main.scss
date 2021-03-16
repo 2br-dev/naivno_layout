@@ -474,6 +474,11 @@
 
 			& .input-field{
 				width: 100%;
+				border-color: #fff;
+
+				& input{
+					color: #fff;
+				}
 			}
 		}
 	}

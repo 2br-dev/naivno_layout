@@ -45,6 +45,11 @@ footer.page-footer{
 		& .input-field{
 			margin: 0;
 			width: calc(100% - 120px);
+			border-color: #fff;
+
+			& input{
+				color: #fff;
+			}
 
 			@media(max-width: 600px){
 				width: 100%;

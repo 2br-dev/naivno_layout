@@ -4198,6 +4198,54 @@ body {
   /*******************
   Utility Classes
 *******************/ }
+  body .add-cart {
+    display: inline-flex; }
+    body .add-cart .minus, body .add-cart .plus {
+      line-height: 30px;
+      padding: 0 12px; }
+    body .add-cart input {
+      width: 30px;
+      text-align: center;
+      background-color: transparent;
+      border: 0; }
+  body a {
+    cursor: pointer; }
+  body input[type="radio"] {
+    display: none; }
+    body input[type="radio"] + label {
+      padding-left: 30px;
+      position: relative;
+      cursor: pointer; }
+      body input[type="radio"] + label:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        left: -10px;
+        border-radius: 50%;
+        background: url("../img/splash.svg") center center no-repeat;
+        transform: translateY(-50%) scale(0);
+        transition: transform 0.3s cubic-bezier(0.55, -0.1, 0.36, 1.25), background-size 0.3s cubic-bezier(0.55, -0.1, 0.36, 1.25); }
+      body input[type="radio"] + label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 0;
+        border-radius: 50%;
+        transform: translateY(-50%) scale(0.5);
+        background: #ee6e73;
+        transition: transform 0.3s cubic-bezier(0.55, -0.1, 0.36, 1.25); }
+      body input[type="radio"] + label:hover:after {
+        transform: translateY(-50%) scale(0.8); }
+    body input[type="radio"]:checked + label:before {
+      transform: translateY(-50%) scale(0.7); }
+    body input[type="radio"]:checked + label:after {
+      transform: translateY(-50%) scale(0.3); }
   body .lazy-image {
     position: relative;
     background-size: cover;
@@ -4272,26 +4320,69 @@ body {
     transform: translateY(-1px);
     border-width: 1px 2px 3px 2px;
     border-radius: 7px 16px 16px 16px/7px 2px 15px 3px;
-    border-color: #fff;
+    border-color: #aaa;
     border-style: solid;
     margin-bottom: 20px; }
-    body form .input-field input[type="text"], body form .input-field textarea {
+    body form .input-field input[type="text"],
+    body form .input-field input[type="phone"],
+    body form .input-field textarea {
       width: 100%;
       border: 0;
       padding: 0 10px;
       line-height: 36px;
       background: transparent;
       display: block;
-      color: #fff;
       border-color: #fff;
       border-style: solid; }
-      body form .input-field input[type="text"]:focus, body form .input-field textarea:focus {
+      body form .input-field input[type="text"]:focus,
+      body form .input-field input[type="phone"]:focus,
+      body form .input-field textarea:focus {
         outline: none; }
     body form .input-field.text-area {
       border-width: 1px 2px 3px 2px;
       border-radius: 7px 16px 16px 16px/7px 2px 15px 3px; }
     body form .input-field textarea {
       height: 200px; }
+  body .modal {
+    position: fixed;
+    z-index: 300;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    padding: 20px;
+    border-width: 1px 2px 3px 2px;
+    border-radius: 7px 16px 16px 16px/7px 2px 15px 3px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, 0%);
+    transition: transform .4s, opacity .4s;
+    opacity: 0;
+    pointer-events: none; }
+    body .modal.opened {
+      transform: translate(-50%, -50%);
+      pointer-events: all;
+      opacity: 1; }
+      body .modal.opened ~ .shadow {
+        opacity: 1;
+        pointer-events: all; }
+    body .modal .modal-header {
+      font-family: Oswald;
+      text-transform: uppercase;
+      font-size: 24px;
+      margin-bottom: 20px; }
+    body .modal .float-right {
+      float: right; }
+    body .modal .extra-actions {
+      margin-bottom: 20px; }
+    body .modal ~ .shadow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity .4s;
+      opacity: 0;
+      pointer-events: none; }
   body p {
     line-height: 1.6rem; }
   body .z-depth-0 {
@@ -4488,7 +4579,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button, a::-webkit-o
   background-color: black;
   border-style: solid;
   border-width: 1px 2px 3px 2px;
-  border-radius: 7px 16px 16px 16px/7px 2px 15px 3px; }
+  border-radius: 7px 16px 16px 16px/7px 2px 15px 3px;
+  transition: background-color .3s; }
+  .btn:hover {
+    background-color: #333; }
   .btn.outlined {
     color: black;
     background-color: transparent; }
@@ -4710,7 +4804,10 @@ footer.page-footer {
     padding: 20px 0; }
     footer.page-footer form .input-field {
       margin: 0;
-      width: calc(100% - 120px); }
+      width: calc(100% - 120px);
+      border-color: #fff; }
+      footer.page-footer form .input-field input {
+        color: #fff; }
       @media (max-width: 600px) {
         footer.page-footer form .input-field {
           width: 100%;
@@ -5076,7 +5173,10 @@ footer.page-footer {
   #main #coop form {
     padding: 20px 0; }
     #main #coop form .input-field {
-      width: 100%; }
+      width: 100%;
+      border-color: #fff; }
+      #main #coop form .input-field input {
+        color: #fff; }
 
 #main p {
   text-align: justify; }
@@ -5337,3 +5437,12 @@ footer.page-footer {
   padding-top: 65%;
   background-size: cover;
   background-position: center; }
+
+#checkout-wrapper .input-field {
+  width: 100%; }
+
+#checkout-wrapper .mdi.mdi-delete {
+  font-size: 21px; }
+
+#checkout-wrapper .address-list .input-field {
+  margin-top: 10px; }

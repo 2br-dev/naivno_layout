@@ -4,6 +4,86 @@ body{
 	background: $paper;
 	line-height: 1.6rem;
 
+	& .add-cart{
+
+		display: inline-flex;
+
+		& .minus, & .plus{
+			line-height: 30px;
+			padding: 0 12px;
+		}
+
+		& input{
+			width: 30px;
+			text-align: center;
+			background-color: transparent;
+			border: 0;
+		}
+	}
+
+	& a{
+		cursor: pointer;
+	}
+
+	& input[type="radio"]{
+
+		display: none;
+
+		& + label{
+
+			padding-left: 30px;
+			position: relative;
+			cursor: pointer;
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				top: 50%;
+				left: -10px;
+				border-radius: 50%;
+				background: url('../img/splash.svg') center center no-repeat;
+				transform: translateY(-50%) scale(0);
+				transition: transform .3s cubic-bezier(.55,-0.1,.36,1.25), background-size .3s cubic-bezier(.55,-0.1,.36,1.25);
+			}
+			
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				top: 50%;
+				left: 0;
+				border-radius: 50%;
+				transform: translateY(-50%) scale(.5);
+				background: $accent;
+				transition: transform .3s cubic-bezier(.55,-0.1,.36,1.25);
+			}
+
+			&:hover{
+
+				&:after{
+					transform: translateY(-50%) scale(.8);
+				}
+			}
+		}
+
+		&:checked + label{
+				
+			&:before{
+				transform: translateY(-50%) scale(.7);
+			}
+
+			&:after{
+				transform: translateY(-50%) scale(.3);
+			}
+		}
+		
+	}
+
 	& .lazy-image{
 		position: relative;
 
@@ -131,18 +211,20 @@ body{
 			transform: translateY(-1px);
 			border-width: 1px 2px 3px 2px;
 			border-radius:7px 16px 16px 16px/7px 2px 15px 3px;
-			border-color: #fff;
+			border-color: #aaa;
 			border-style: solid;
 			margin-bottom: 20px;
 
-			& input[type="text"], & textarea{
+			& input[type="text"], 
+			& input[type="phone"],
+			& textarea{
 				width: 100%;
 				border: 0;
 				padding: 0 10px;
 				line-height: 36px;
 				background: transparent;
 				display: block;
-				color: #fff;
+				// color: #fff;
 				border-color: #fff;
 				border-style: solid;
 
@@ -160,6 +242,60 @@ body{
 			& textarea{
 				height: 200px;
 			}
+		}
+	}
+
+	& .modal{
+		position: fixed;
+		z-index: 300;
+		top: 50%;
+		left: 50%;
+		background: #fff;
+		padding: 20px;
+		border-width: 1px 2px 3px 2px;
+		border-radius:7px 16px 16px 16px/7px 2px 15px 3px;
+		box-shadow: 0 8px 8px rgba(black, .4);
+		transform: translate(-50%, 0%);
+		transition: transform .4s, opacity .4s;
+		opacity: 0;
+		pointer-events: none;
+		
+		&.opened{
+			transform: translate(-50%, -50%);
+			pointer-events: all;
+			opacity: 1;
+			
+			& ~ .shadow{
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+		
+		& .modal-header{
+			font-family: Oswald;
+			text-transform: uppercase;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		
+		& .float-right{
+			float: right;
+		}
+		
+		& .extra-actions{
+			margin-bottom: 20px;
+		}
+		
+		& ~ .shadow{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(black, .7);
+			transition: opacity .4s;
+			opacity: 0;
+			pointer-events: none;
 		}
 	}
 

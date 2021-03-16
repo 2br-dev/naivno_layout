@@ -1,0 +1,20 @@
+#checkout-wrapper{
+
+    & .input-field{
+        width: 100%;
+    }
+
+    & .mdi{
+
+        &.mdi-delete{
+            font-size: 21px;
+        }
+    }
+
+    & .address-list{
+
+        & .input-field{
+            margin-top: 10px;
+        }
+    }
+}
