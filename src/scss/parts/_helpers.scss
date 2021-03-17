@@ -34,6 +34,7 @@ body{
 			padding-left: 30px;
 			position: relative;
 			cursor: pointer;
+			display: inline-block;
 
 			&:before{
 				content: '';
@@ -41,11 +42,11 @@ body{
 				position: absolute;
 				width: 30px;
 				height: 30px;
-				top: 50%;
+				top: -4px;
 				left: -10px;
 				border-radius: 50%;
 				background: url('../img/splash.svg') center center no-repeat;
-				transform: translateY(-50%) scale(0);
+				transform: scale(0);
 				transition: transform .3s cubic-bezier(.55,-0.1,.36,1.25), background-size .3s cubic-bezier(.55,-0.1,.36,1.25);
 			}
 			
@@ -55,10 +56,10 @@ body{
 				position: absolute;
 				width: 10px;
 				height: 10px;
-				top: 50%;
+				top:6px;
 				left: 0;
 				border-radius: 50%;
-				transform: translateY(-50%) scale(.5);
+				transform: scale(.5);
 				background: $accent;
 				transition: transform .3s cubic-bezier(.55,-0.1,.36,1.25);
 			}
@@ -66,7 +67,7 @@ body{
 			&:hover{
 
 				&:after{
-					transform: translateY(-50%) scale(.8);
+					transform: scale(.8);
 				}
 			}
 		}
@@ -74,11 +75,11 @@ body{
 		&:checked + label{
 				
 			&:before{
-				transform: translateY(-50%) scale(.7);
+				transform: scale(.7);
 			}
 
 			&:after{
-				transform: translateY(-50%) scale(.3);
+				transform: scale(.3);
 			}
 		}
 		
@@ -217,6 +218,8 @@ body{
 
 			& input[type="text"], 
 			& input[type="phone"],
+			& input[type="password"],
+			& input[type="mail"],
 			& textarea{
 				width: 100%;
 				border: 0;
@@ -259,6 +262,27 @@ body{
 		transition: transform .4s, opacity .4s;
 		opacity: 0;
 		pointer-events: none;
+		max-width: 360px;
+
+		& .errors{
+			background: $accent;
+			color: #FFF;
+			width: calc(100% + 40px);
+			box-sizing: border-box;
+			padding: 6px 20px;
+			margin: 0 10px 10px -20px;
+
+			& p{
+				margin: 0;
+			}
+		}
+
+
+		& .input-field{
+
+			display: block;
+			min-width: 320px;
+		}
 		
 		&.opened{
 			transform: translate(-50%, -50%);
@@ -296,6 +320,7 @@ body{
 			transition: opacity .4s;
 			opacity: 0;
 			pointer-events: none;
+			z-index: 299;
 		}
 	}
 

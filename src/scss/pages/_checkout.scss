@@ -17,4 +17,32 @@
             margin-top: 10px;
         }
     }
+
+    & .material-table{
+
+        @media(max-width: 600px){
+
+            display: block;
+
+            & thead{
+                display: none;
+            }
+
+            & tbody{
+                display: block;
+
+                & .order{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    padding: 6px 0;
+
+                    & td{
+                        flex-grow: 1;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,17 +1,32 @@
 <form class="modal" id="login">
     <div class="modal-header">Авторизация</div>
     <div class="input-field"><input type="text" class="styled" placeholder="Логин"></div>
-    <div class="input-field"><input type="text" class="styled" placeholder="Пароль"></div>
+    <div class="input-field"><input type="password" class="styled" placeholder="Пароль"></div>
     <div class="extra-actions">
         <a href="">Забыли пароль?</a>
-        <a href="" class="float-right">Уже есть аккаунт?</a>
+        <a href="#register" class="float-right modal-trigger">Регистрация</a>
     </div>
     <div class="button-wrapper">
-        <a href="" class="btn outlined accent">Закрыть</a>
+        <a href="" class="btn modal-close outlined accent">Закрыть</a>
         <a href="" class="btn accent float-right">Войти</a>
     </div>
 </form>
-<div class="modal" id="register">
-    
-</div>
-<div class="shadow"></div>
+<form class="modal" id="register">
+    <div class="modal-header">Регистрация</div>
+    <div class="input-field"><input type="text" class="styled" placeholder="Логин"></div>
+    <div class="input-field"><input type="mail" class="styled" placeholder="E-mail"></div>
+    <div class="input-field"><input type="password" class="styled" placeholder="Пароль"></div>
+    <div class="input-field"><input type="password" class="styled" placeholder="Повторите пароль"></div>
+    <div class="errors">
+        <p>Пользователь с этим адресом почты уже имеется в системе. <a href="">Восстановить пароль?</a></p>
+    </div>
+    <div class="extra-actions">
+        <a href="">Забыли пароль?</a>
+        <a href="#login" class="float-right modal-trigger">Уже есть аккаунт?</a>
+    </div>
+    <div class="button-wrapper">
+        <a href="" class="btn modal-close outlined accent">Закрыть</a>
+        <a href="" class="btn accent float-right">Продолжить</a>
+    </div>
+</form>
+<div class="shadow modal-close"></div>

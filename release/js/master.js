@@ -22744,6 +22744,8 @@ $(() => {
 	$('body').on('click', '.dropdown-container .current', openDropdown);
 	$('body').on('click', '.dropdown-container .popup a', setCurrent);
 	$('body').on('click', 'a.color', setColor);
+	$('body').on('click', '.modal-trigger', openModal);
+	$('body').on('click', '.modal-close', closeModal);
 
 	loadImages();
 
@@ -22766,26 +22768,18 @@ $(() => {
 });
 
 // MISC FUNCTIONS ======================================
-// function openImages(){
-//     var src = $(this).attr('src');
-//     $(this).parents('.lazy-image').css({
-//         backgroundImage: 'url('+src+')'
-//     }).addClass('complete');
-//     $(this).parents('.lazy-image').find('img').remove();
-// }
-function loadImages(){
-    // $('.lazy-image').each((index, el) => {
-
-    //     var url = $(el).data('src');
-    //     // debugger
-
-    //     if(!url)
-    //         return;
-
-    //     var imgTag = $('<img src="'+url+'" class="lazy-loading" />')[0];
-    //     $(el).append(imgTag);
-    //     $('img').one('load', openImages);
-    // })
+function openModal(e){
+	$('.modal').removeClass('opened');
+	var modal = $(this).attr('href');
+	$(modal).addClass('opened');
+}
+function closeModal(e){
+	if(e){
+		e.preventDefault();
+	}
+	$('.modal').removeClass('opened');
+}
+function loadImages(e){
 	$('.lazy-image').lazy();
 }
 function setColor(e){
