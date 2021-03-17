@@ -4737,7 +4737,8 @@ header {
       line-height: 80px;
       padding-left: 40px;
       background: url(../img/burger.svg) center center no-repeat;
-      background-size: contain; }
+      background-size: contain;
+      margin-left: 14px; }
       @media (min-width: 1400px) {
         header .cart-wrapper .sidenav-trigger {
           display: none; } }
@@ -5000,15 +5001,14 @@ footer.page-footer {
         @media (max-width: 1200px) {
           #main #hero .swiper-container .swiper-slide .data .name {
             font-size: 7vw;
-            line-height: calc(7vw + 10px); } }
+            line-height: calc(15vw + 16px); } }
       #main #hero .swiper-container .swiper-slide .data .sub {
         font-family: 'Oswald';
         font-size: 52px;
         line-height: 4rem; }
         @media (max-width: 1200px) {
           #main #hero .swiper-container .swiper-slide .data .sub {
-            font-size: 3.5vw;
-            line-height: calc(3.5vw + 10px); } }
+            font-size: 3.5vw; } }
       #main #hero .swiper-container .swiper-slide .data .chars {
         margin: 20px 0; }
         @media (max-width: 600px) {
@@ -5074,7 +5074,7 @@ footer.page-footer {
           #main #hero .swiper-container .swiper-slide .data .sub {
             font-size: 7vw;
             margin-bottom: 20px;
-            line-height: 30px; }
+            line-height: calc(7vw + 10px); }
           #main #hero .swiper-container .swiper-slide .data .price {
             flex-direction: column; }
             #main #hero .swiper-container .swiper-slide .data .price .sum {
