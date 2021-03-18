@@ -146,9 +146,8 @@
             </form>
             <form class="row">
                 <div class="col s12 right-align">
-                    <div>
-                        К оплате: 240₽
-                    </div>
+                    <div>Стоимость: 240₽<span class="delivery-cost"> + 200₽</span></div>
+                    <div class="total">К оплате: <strong>440₽</strong></div>
                 </div>
                 <div class="col l3 m4 s12">
                     <div class="underline-wrapper">
@@ -202,13 +201,20 @@
                     </div>
                     <div class="row">
                         <div class="col l9 m7 s12">
+                            <h3>Вид доставки</h3>
                             <h3>Адрес</h3>
-                            <div class="checkout_changeRegionButton rs-checkout_changeRegionButton">
-                                <img width="14" src="/img/map_marker.svg" class="map-marker">
-                                <span>Анапа</span>
-                                <a class="small underlined">изменить</a>
+                            <div class="delivery-list">
+                                <div><input type="radio" class="styled need-address" value="delivery1" name="delivery" checked id="del1"><label for="del1">Самовывоз</label></div>
+                                <div><input type="radio" class="styled" value="delivery2" name="delivery" id="del2"><label for="del2">CDEK</label></div>
+                                <div><input type="radio" class="styled need-address" value="delivery3" name="delivery" id="del3"><label for="del3">Транспортная компания до терминала</label></div>
+                                <div><input type="radio" class="styled" value="delivery4" name="delivery" id="del4"><label for="del4">Курьер</label></div>
                             </div>
-                            <div class="address-list">
+                            <div class="address-list hidden">
+                                <div class="checkout_changeRegionButton rs-checkout_changeRegionButton">
+                                    <img width="14" src="/img/map_marker.svg" class="map-marker">
+                                    <span>Анапа</span>
+                                    <a class="small underlined">изменить</a>
+                                </div>
                                 <div><input type="radio" class="styled" value="address1" name="address" checked id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
                                 <div><input type="radio" class="styled" value="address2" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
                                 <div><input type="radio" class="styled" value="address3" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>

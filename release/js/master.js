@@ -22746,6 +22746,8 @@ $(() => {
 	$('body').on('click', 'a.color', setColor);
 	$('body').on('click', '.modal-trigger', openModal);
 	$('body').on('click', '.modal-close', closeModal);
+	$('body').on('change', '[name="address"]', updateAddressField);
+	$('body').on('change', '[name="delivery"]', updateAddressList);
 
 	loadImages();
 
@@ -22768,6 +22770,20 @@ $(() => {
 });
 
 // MISC FUNCTIONS ======================================
+function updateAddressList(e){
+	if($(this).hasClass('need-address')){
+		$('.address-list').removeClass('hidden');
+	}else{
+		$('.address-list').addClass('hidden');
+	}
+}
+function updateAddressField(e){
+	if($(this).val() == 'user-address'){
+		$('#user-address').removeClass('hidden');
+	}else{
+		$('#user-address').addClass('hidden');
+	}
+}
 function openModal(e){
 	$('.modal').removeClass('opened');
 	var modal = $(this).attr('href');

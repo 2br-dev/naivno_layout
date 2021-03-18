@@ -4,17 +4,39 @@
         width: 100%;
     }
 
+    & .delivery-list{
+        margin-bottom: 20px;
+    }
+
+    & .delivery-cost{
+        color: $accent;
+    }
+
+    & .total{
+        width: fit-content;
+        float: right;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+    
+    & .address-list{
+        
+        & input[type="radio"]{
+
+            &[value="user-address"]{
+
+                & + label{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
     & .mdi{
 
         &.mdi-delete{
             font-size: 21px;
-        }
-    }
-
-    & .address-list{
-
-        & .input-field{
-            margin-top: 10px;
         }
     }
 

@@ -21,13 +21,22 @@ body{
 		}
 	}
 
+	& .hidden{
+		display: none !important;
+		pointer-events: none;
+	}
+
 	& a{
 		cursor: pointer;
 	}
 
-	& input[type="radio"]{
+	& input[type="radio"].styled{
 
 		display: none;
+
+		& [name=address]{
+			display: none;
+		}
 
 		& + label{
 

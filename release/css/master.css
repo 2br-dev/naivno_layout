@@ -4208,16 +4208,21 @@ body {
       text-align: center;
       background-color: transparent;
       border: 0; }
+  body .hidden {
+    display: none !important;
+    pointer-events: none; }
   body a {
     cursor: pointer; }
-  body input[type="radio"] {
+  body input[type="radio"].styled {
     display: none; }
-    body input[type="radio"] + label {
+    body input[type="radio"].styled [name=address] {
+      display: none; }
+    body input[type="radio"].styled + label {
       padding-left: 30px;
       position: relative;
       cursor: pointer;
       display: inline-block; }
-      body input[type="radio"] + label:before {
+      body input[type="radio"].styled + label:before {
         content: '';
         display: block;
         position: absolute;
@@ -4229,7 +4234,7 @@ body {
         background: url("../img/splash.svg") center center no-repeat;
         transform: scale(0);
         transition: transform 0.3s cubic-bezier(0.55, -0.1, 0.36, 1.25), background-size 0.3s cubic-bezier(0.55, -0.1, 0.36, 1.25); }
-      body input[type="radio"] + label:after {
+      body input[type="radio"].styled + label:after {
         content: '';
         display: block;
         position: absolute;
@@ -4241,11 +4246,11 @@ body {
         transform: scale(0.5);
         background: #ee6e73;
         transition: transform 0.3s cubic-bezier(0.55, -0.1, 0.36, 1.25); }
-      body input[type="radio"] + label:hover:after {
+      body input[type="radio"].styled + label:hover:after {
         transform: scale(0.8); }
-    body input[type="radio"]:checked + label:before {
+    body input[type="radio"].styled:checked + label:before {
       transform: scale(0.7); }
-    body input[type="radio"]:checked + label:after {
+    body input[type="radio"].styled:checked + label:after {
       transform: scale(0.3); }
   body .lazy-image {
     position: relative;
@@ -5562,11 +5567,24 @@ footer.page-footer {
 #checkout-wrapper .input-field {
   width: 100%; }
 
+#checkout-wrapper .delivery-list {
+  margin-bottom: 20px; }
+
+#checkout-wrapper .delivery-cost {
+  color: #ee6e73; }
+
+#checkout-wrapper .total {
+  width: fit-content;
+  float: right;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 10px; }
+
+#checkout-wrapper .address-list input[type="radio"][value="user-address"] + label {
+  margin-bottom: 20px; }
+
 #checkout-wrapper .mdi.mdi-delete {
   font-size: 21px; }
-
-#checkout-wrapper .address-list .input-field {
-  margin-top: 10px; }
 
 @media (max-width: 600px) {
   #checkout-wrapper .material-table {
