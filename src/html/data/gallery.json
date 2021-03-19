@@ -2,56 +2,67 @@
     {
         "image": "/img/gallery/gorshenin.jpg",
         "title": "Роман Горшенин",
+        "subtitle": "Подзаголовок",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/kuznezov.jpg",
         "title": "Михаил Кузнецов",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/shtroman.jpg",
         "title": "Тимур Штроман",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/koshensky.jpg",
         "title": "Дмитрий Кошенский",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/shabratova.jpg",
         "title": "Дарья Шабратова и Николай Гальцов",
+        "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat similique, vel qui eum earum sunt saepe inventore hic rem.",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/gabrelyan.jpg",
         "title": "Ашот Габрелян",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/lukyanov.jpg",
         "title": "Сергей Лукьянов",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/arututyan.jpg",
         "title": "Альберт Арутюнян",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/romanova.jpg",
         "title": "Екатерина Романова",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/alexandrov.jpg",
         "title": "Роман Александров",
+        "subtitle": "",
         "link": "/author-gallery.html"
     },
     {
         "image": "/img/gallery/gorshenin.jpg",
         "title": "Николай bondarenko",
+        "subtitle": "",
         "link": "/author-gallery.html"
     }
 ]

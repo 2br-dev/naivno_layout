@@ -5,13 +5,13 @@
 </head>
 <body>
 	@@include('./parts/header.html')
-	<div class="global-wrapper" id="gallery">
+	<div class="global-wrapper" id="video">
 		<div class="container">
             <div class="row flex">
                 <div class="col s12">
-                    <h1>Галерея</h1>
+                    <h1>Видео</h1>
                 </div>
-				@@loop('./parts/gallery-entry.html', './data/gallery.json')
+				@@loop('./parts/video.html', './data/video.json')
             </div>
 		</div>
 	</div>

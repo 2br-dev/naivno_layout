@@ -1,0 +1,32 @@
+#video{
+
+    & .col{
+        margin-bottom: 1.5rem;
+    }
+
+    .video-wrapper{
+    
+        & iframe{
+            width: 100%;
+        }
+    }
+
+    & .title-wrapper{
+        display: flex;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+        
+        & .title{
+            font-family: Oswald;
+            flex-grow: 1;
+            line-height: 30px;
+        }
+    }
+    
+    & .date{
+        flex-shrink: 0;
+        color: #777;
+        font-size: 14px;
+    }
+}

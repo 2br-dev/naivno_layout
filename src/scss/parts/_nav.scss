@@ -42,18 +42,63 @@ header{
 		flex-grow: 1;
 		justify-content: flex-end;
 
-		& a{
-			padding: 0 10px;
-			line-height: 74px;
-			white-space: nowrap;
+		& li{
+			display: inline-block;
+			list-style: none;
 
-			&:hover{
-				text-decoration: underline;
-				text-decoration-style: dotted;
-				text-decoration-thickness: 1px;
-				text-underline-offset: 2px;
+			& a{
+				padding: 0 10px;
+				line-height: 74px;
+				white-space: nowrap;
+	
+				&:hover{
+					text-decoration: underline;
+					text-decoration-style: dotted;
+					text-decoration-thickness: 1px;
+					text-underline-offset: 2px;
+				}
+			}
+			
+			&.folder{
+
+				position: relative;
+
+				& ul{
+					display: block;
+					position: absolute;
+					box-shadow: 0 2px 4px rgba(black, .3);
+					transition: top .2s, opacity .2s;
+					pointer-events: none;
+					opacity: 0;
+					top: calc(100% - 50px);
+					z-index: 200;
+
+					& li{
+						display: block;
+
+						& a{
+							display: block;
+							line-height:40px;
+							background: #fff;
+
+							&:hover{
+								background: #efefef;
+							}
+						}
+					}
+				}
+
+				&:hover{
+
+					& uL{
+						top: calc(100% - 40px);
+						opacity: 1;
+						pointer-events: all;
+					}
+				}
 			}
 		}
+
 	}
 
 	& .profile-block{

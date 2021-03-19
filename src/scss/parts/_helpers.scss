@@ -500,6 +500,26 @@ h2{
 
 	padding: 0;
 	list-style: none;
+
+	& .folder{
+
+		& ul{
+
+			background: #efefef;
+
+			& li{
+				max-height: 0;
+				overflow: hidden;
+			}
+		}
+
+		&:hover ul{
+
+			& li{
+				max-height: 40px;
+			}
+		}
+	}
 	
 }
 
