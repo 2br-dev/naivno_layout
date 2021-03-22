@@ -4,6 +4,10 @@ body{
 	background: $paper;
 	line-height: 1.6rem;
 
+	main{
+        min-height: calc(100vh - 464px);
+    }
+
 	& .add-cart{
 
 		display: inline-flex;
@@ -254,6 +258,40 @@ body{
 			& textarea{
 				height: 200px;
 			}
+		}
+
+		& .cheсk-wrapper{
+
+			& input[type="checkbox"].styled{
+				display: none;
+
+				&:checked + label{
+
+					&:before{
+						box-shadow: 0 0 0 6px rgb(83, 83, 83) inset;
+						background: $accent;
+					}
+				}
+
+				& + label{
+					user-select: none;
+					cursor: pointer;
+		
+					&:before{
+						content: '';
+						display: inline-block;
+						background: #ccc;
+						width: 20px;
+						height: 20px;
+						margin-right: 10px;
+						transform: translateY(3px);
+						border-width: 1% 2% 3% 2%;
+						border-radius:7% 16% 16% 16%/7% 2% 15% 3%;
+						transition: box-shadow .4s, background-color .4s;
+					}
+				}
+			}
+	
 		}
 	}
 

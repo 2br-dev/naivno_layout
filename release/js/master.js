@@ -22748,6 +22748,8 @@ $(() => {
 	$('body').on('click', '.modal-close', closeModal);
 	$('body').on('change', '[name="address"]', updateAddressField);
 	$('body').on('change', '[name="delivery"]', updateAddressList);
+	$('body').on('click', '.history>tbody>tr', expandDetails);
+	$('body').on('change', '.toggle-group', toggleGroup);
 
 	loadImages();
 
@@ -22766,10 +22768,24 @@ $(() => {
 		}
 	}
 	materialbox = M.Materialbox.init(elems, options);
+	var instance = M.Tabs.init(document.querySelectorAll('.tabs'), {
+
+	});
 
 });
 
 // MISC FUNCTIONS ======================================
+function toggleGroup(e){
+	var group = $(this).data('target');
+	$('[data-group="'+group+'"]').toggleClass('visible');
+}
+function expandDetails(){
+	var already = $(this).next().find('.subtable-wrapper').css('display') == 'block';
+	$('.subtable-wrapper').slideUp('fast');
+	if(!already){
+		$(this).next().find('.subtable-wrapper').slideDown('fast');
+	}
+}
 function updateAddressList(e){
 	if($(this).hasClass('need-address')){
 		$('.address-list').removeClass('hidden');

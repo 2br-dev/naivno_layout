@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Oswald:wght@300;400;700&display=swap");
 .materialize-red {
   background-color: #e51c23 !important; }
@@ -2254,84 +2255,6 @@ ul.staggered-list li {
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(51, 51, 51, 0.08); }
 
-table, th, td {
-  border: none; }
-
-table {
-  width: 100%;
-  display: table;
-  border-collapse: collapse;
-  border-spacing: 0; }
-  table.striped tr {
-    border-bottom: none; }
-  table.striped > tbody > tr:nth-child(odd) {
-    background-color: rgba(242, 242, 242, 0.5); }
-  table.striped > tbody > tr > td {
-    border-radius: 0; }
-  table.highlight > tbody > tr {
-    transition: background-color .25s ease; }
-    table.highlight > tbody > tr:hover {
-      background-color: rgba(242, 242, 242, 0.5); }
-  table.centered thead tr th, table.centered tbody tr td {
-    text-align: center; }
-
-tr {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
-
-td, th {
-  padding: 15px 5px;
-  display: table-cell;
-  text-align: left;
-  vertical-align: middle;
-  border-radius: 2px; }
-
-@media only screen and (max-width: 992px) {
-  table.responsive-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    display: block;
-    position: relative;
-    /* sort out borders */ }
-    table.responsive-table td:empty:before {
-      content: '\00a0'; }
-    table.responsive-table th,
-    table.responsive-table td {
-      margin: 0;
-      vertical-align: top; }
-    table.responsive-table th {
-      text-align: left; }
-    table.responsive-table thead {
-      display: block;
-      float: left; }
-      table.responsive-table thead tr {
-        display: block;
-        padding: 0 10px 0 0; }
-        table.responsive-table thead tr th::before {
-          content: "\00a0"; }
-    table.responsive-table tbody {
-      display: block;
-      width: auto;
-      position: relative;
-      overflow-x: auto;
-      white-space: nowrap; }
-      table.responsive-table tbody tr {
-        display: inline-block;
-        vertical-align: top; }
-    table.responsive-table th {
-      display: block;
-      text-align: right; }
-    table.responsive-table td {
-      display: block;
-      min-height: 1.25em;
-      text-align: left; }
-    table.responsive-table tr {
-      border-bottom: none;
-      padding: 0 10px; }
-    table.responsive-table thead {
-      border: 0;
-      border-right: 1px solid rgba(0, 0, 0, 0.12); } }
-
 .collection {
   margin: 0.5rem 0 1rem 0;
   border: 1px solid #e0e0e0;
@@ -2636,6 +2559,73 @@ td, th {
     .card .card-reveal .card-title {
       cursor: pointer;
       display: block; }
+
+.tabs {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 48px;
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  white-space: nowrap; }
+  .tabs.tabs-transparent {
+    background-color: transparent; }
+    .tabs.tabs-transparent .tab a,
+    .tabs.tabs-transparent .tab.disabled a,
+    .tabs.tabs-transparent .tab.disabled a:hover {
+      color: rgba(255, 255, 255, 0.7); }
+    .tabs.tabs-transparent .tab a:hover,
+    .tabs.tabs-transparent .tab a.active {
+      color: #fff; }
+    .tabs.tabs-transparent .indicator {
+      background-color: #fff; }
+  .tabs.tabs-fixed-width {
+    display: flex; }
+    .tabs.tabs-fixed-width .tab {
+      flex-grow: 1; }
+  .tabs .tab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase; }
+    .tabs .tab a {
+      color: rgba(238, 110, 115, 0.7);
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0 24px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: color .28s ease, background-color .28s ease; }
+      .tabs .tab a:focus, .tabs .tab a:focus.active {
+        background-color: rgba(246, 178, 181, 0.2);
+        outline: none; }
+      .tabs .tab a:hover, .tabs .tab a.active {
+        background-color: transparent;
+        color: #ee6e73; }
+    .tabs .tab.disabled a,
+    .tabs .tab.disabled a:hover {
+      color: rgba(238, 110, 115, 0.4);
+      cursor: default; }
+  .tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #f6b2b5;
+    will-change: left, right; }
+
+@media only screen and (max-width: 992px) {
+  .tabs {
+    display: flex; }
+    .tabs .tab {
+      flex-grow: 1; }
+      .tabs .tab a {
+        padding: 0 12px; } }
 
 /*!
  * Waves v0.6.0
@@ -3624,6 +3614,8 @@ body {
   /*******************
   Utility Classes
 *******************/ }
+  body main {
+    min-height: calc(100vh - 464px); }
   body .add-cart {
     display: inline-flex; }
     body .add-cart .minus, body .add-cart .plus {
@@ -3779,6 +3771,25 @@ body {
       border-radius: 7px 16px 16px 16px/7px 2px 15px 3px; }
     body form .input-field textarea {
       height: 200px; }
+  body form .cheсk-wrapper input[type="checkbox"].styled {
+    display: none; }
+    body form .cheсk-wrapper input[type="checkbox"].styled:checked + label:before {
+      box-shadow: 0 0 0 6px #535353 inset;
+      background: #ee6e73; }
+    body form .cheсk-wrapper input[type="checkbox"].styled + label {
+      user-select: none;
+      cursor: pointer; }
+      body form .cheсk-wrapper input[type="checkbox"].styled + label:before {
+        content: '';
+        display: inline-block;
+        background: #ccc;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        transform: translateY(3px);
+        border-width: 1% 2% 3% 2%;
+        border-radius: 7% 16% 16% 16%/7% 2% 15% 3%;
+        transition: box-shadow .4s, background-color .4s; }
   body .modal {
     position: fixed;
     z-index: 300;
@@ -5425,7 +5436,9 @@ footer.page-footer {
   #main #hero .swiper-container .swiper-slide {
     height: 39vw;
     min-height: 380px;
-    display: flex; }
+    display: flex;
+    padding: 0 10px;
+    box-sizing: border-box; }
     @media (min-width: 2000px) {
       #main #hero .swiper-container .swiper-slide {
         height: 30vw; } }
@@ -6067,3 +6080,84 @@ footer.page-footer {
   font-weight: bold;
   font-size: 20px;
   margin: 10px 0; }
+
+#account .tabs {
+  background: transparent;
+  margin-bottom: 20px; }
+
+#account .input-field {
+  width: 100%; }
+  #account .input-field input {
+    width: 100%; }
+
+#account [data-group] {
+  display: none; }
+  #account [data-group].visible {
+    display: block; }
+
+@media (max-width: 600px) {
+  #account .hide-on-mobile {
+    display: none; }
+  #account .subtable-wrapper {
+    max-width: calc(100vw - 20px);
+    overflow-x: auto;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset;
+    padding: 0 10px; }
+  #account tr td {
+    white-space: nowrap; } }
+
+#account .actions-wrapper {
+  text-align: right;
+  position: relative; }
+  #account .actions-wrapper > a {
+    line-height: 30px;
+    display: inline-block;
+    width: 30px;
+    text-align: center; }
+  #account .actions-wrapper .actions {
+    position: absolute;
+    text-align: right;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    right: 0;
+    z-index: 20;
+    transform: translateY(-20px);
+    transition: transform .3s, opacity .3s; }
+    #account .actions-wrapper .actions a {
+      display: block;
+      white-space: nowrap;
+      padding: 0 10px;
+      background: #ffffff; }
+      #account .actions-wrapper .actions a:hover {
+        background: #fafafa; }
+  #account .actions-wrapper:hover .actions {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0); }
+
+#account .history {
+  border-spacing: 0;
+  width: 100%; }
+  #account .history th {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #777;
+    border-bottom: 1px solid #ccc; }
+  #account .history td {
+    border-collapse: collapse;
+    border: 0;
+    line-height: 2rem; }
+  #account .history > tbody > tr {
+    cursor: pointer; }
+    #account .history > tbody > tr:nth-child(4n + 1) {
+      background: #eeeeee; }
+
+#account .subtable-wrapper {
+  display: none; }
+  #account .subtable-wrapper .subtable {
+    border-spacing: 0;
+    width: 100%; }
+    #account .subtable-wrapper .subtable td, #account .subtable-wrapper .subtable th {
+      line-height: 2rem; }
