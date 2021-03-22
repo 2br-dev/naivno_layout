@@ -22779,12 +22779,23 @@ function toggleGroup(e){
 	var group = $(this).data('target');
 	$('[data-group="'+group+'"]').toggleClass('visible');
 }
-function expandDetails(){
-	var already = $(this).next().find('.subtable-wrapper').css('display') == 'block';
-	$('.subtable-wrapper').slideUp('fast');
-	if(!already){
-		$(this).next().find('.subtable-wrapper').slideDown('fast');
+function expandDetails(e){
+
+	var path = e.originalEvent.path;
+	var links = $(path).filter((index, el) => {
+		return el.tagName == 'A'
+	});
+
+	if(!links.length){
+
+		e.preventDefault();
+		var already = $(this).next().find('.subtable-wrapper').css('display') == 'block';
+		$('.subtable-wrapper').slideUp('fast');
+		if(!already){
+			$(this).next().find('.subtable-wrapper').slideDown('fast');
+		}
 	}
+
 }
 function updateAddressList(e){
 	if($(this).hasClass('need-address')){
