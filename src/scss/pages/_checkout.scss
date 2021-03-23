@@ -33,6 +33,13 @@
         }
     }
 
+    & table{
+
+        & td{
+            line-height: 40px;
+        }
+    }
+
     & .mdi{
 
         &.mdi-delete{

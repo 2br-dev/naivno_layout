@@ -10,8 +10,8 @@
     <main class="global-wrapper" id="account">
         <div class="container">
             <ul class="tabs">
-                <li class="tab"><a href="#history">История заказов</a></li>
                 <li class="tab"><a href="#profile">Профиль</a></li>
+                <li class="tab"><a href="#history">История заказов</a></li>
             </ul>
             <form action="" id="profile">
                 <div class="row">
@@ -19,10 +19,22 @@
                         <h2>Общие сведения</h2>
                     </div>
                     <div class="col l4 offset-l4 m6 offset-m3 s12">
-                        <div class="input-field"><input class="styled" type="text" placeholder="Имя"></div>
-                        <div class="input-field"><input class="styled" type="text" placeholder="Фамилия"></div>
-                        <div class="input-field"><input class="styled" type="text" placeholder="Email"></div>
-                        <div class="input-field"><input class="styled" type="text" placeholder="Телефон"></div>
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Имя">
+                            <label for="">Имя</label>
+                        </div>
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Фамилия">
+                            <label for="">Фамилия</label>
+                        </div>
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Email">
+                            <label for="">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input class="styled" type="text" placeholder="Телефон">
+                            <label for="">Телефон</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -33,12 +45,18 @@
                         <div class="cheсk-wrapper"><input type="checkbox" class="styled toggle-group"
                                 data-target="security" id="change_pass"><label for="change_pass">Изменить
                                 пароль</label></div>
-                        <div class="input-field" data-group="security"><input class="styled" type="password"
-                                placeholder="Старый пароль"></div>
-                        <div class="input-field" data-group="security"><input class="styled" type="password"
-                                placeholder="Новый пароль"></div>
-                        <div class="input-field" data-group="security"><input class="styled" type="password"
-                                placeholder="Подтвердить пароль"></div>
+                        <div class="input-field" data-group="security">
+                            <input class="styled" type="password" placeholder="Старый пароль">
+                            <label for="">Старый пароль</label>
+                        </div>
+                        <div class="input-field" data-group="security">
+                            <input class="styled" type="password" placeholder="Новый пароль">
+                            <label for="">Новый пароль</label>
+                        </div>
+                        <div class="input-field" data-group="security">
+                            <input class="styled" type="password" placeholder="Подтвердить пароль">
+                            <label for="">Подтвердить пароль</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -52,9 +70,12 @@
                         </div>
                         <div class="input-field" data-group="law-face">
                             <input class="styled" type="text" placeholder="Наименование организации">
+                            <span class="error-holder"></span>
+                            <label for="">Наименование организации</label>
                         </div>
                         <div class="input-field" data-group="law-face">
                             <input class="styled" type="text" placeholder="Номер налогоплательщика (ИНН)">
+                            <label for="">Номер налогоплательщика (ИНН)</label>
                         </div>
                     </div>
                 </div>

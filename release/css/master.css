@@ -3739,6 +3739,23 @@ body {
     content: '';
     display: block;
     height: 50px; }
+  body table {
+    border-spacing: 0;
+    width: 100%; }
+    body table th {
+      text-align: left;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #777;
+      border-bottom: 1px solid #ccc; }
+    body table td {
+      border-collapse: collapse;
+      border: 0;
+      line-height: 2rem; }
+    body table > tbody > tr {
+      cursor: pointer; }
+      body table > tbody > tr:nth-child(2n + 1) {
+        background: #eeeeee; }
   body form .input-field {
     display: inline-block;
     transform: translateY(-1px);
@@ -3746,7 +3763,9 @@ body {
     border-radius: 7px 16px 16px 16px/7px 2px 15px 3px;
     border-color: #aaa;
     border-style: solid;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative; }
     body form .input-field input[type="text"],
     body form .input-field input[type="phone"],
     body form .input-field input[type="password"],
@@ -3759,13 +3778,45 @@ body {
       background: transparent;
       display: block;
       border-color: #fff;
-      border-style: solid; }
+      border-style: solid;
+      position: relative;
+      z-index: 3; }
       body form .input-field input[type="text"]:focus,
       body form .input-field input[type="phone"]:focus,
       body form .input-field input[type="password"]:focus,
       body form .input-field input[type="mail"]:focus,
       body form .input-field textarea:focus {
         outline: none; }
+      body form .input-field input[type="text"]:focus ~ label, body form .input-field input[type="text"]:not(:placeholder-shown) ~ label,
+      body form .input-field input[type="phone"]:focus ~ label,
+      body form .input-field input[type="phone"]:not(:placeholder-shown) ~ label,
+      body form .input-field input[type="password"]:focus ~ label,
+      body form .input-field input[type="password"]:not(:placeholder-shown) ~ label,
+      body form .input-field input[type="mail"]:focus ~ label,
+      body form .input-field input[type="mail"]:not(:placeholder-shown) ~ label,
+      body form .input-field textarea:focus ~ label,
+      body form .input-field textarea:not(:placeholder-shown) ~ label {
+        font-size: 12px;
+        top: -15px; }
+      body form .input-field input[type="text"]::placeholder,
+      body form .input-field input[type="phone"]::placeholder,
+      body form .input-field input[type="password"]::placeholder,
+      body form .input-field input[type="mail"]::placeholder,
+      body form .input-field textarea::placeholder {
+        color: transparent; }
+      body form .input-field input[type="text"] ~ label,
+      body form .input-field input[type="phone"] ~ label,
+      body form .input-field input[type="password"] ~ label,
+      body form .input-field input[type="mail"] ~ label,
+      body form .input-field textarea ~ label {
+        position: absolute;
+        text-shadow: 0 0 2px #F5F5F5;
+        padding: 0 5px;
+        pointer-events: none;
+        top: 4px;
+        background: #F5F5F5;
+        transition: top .2s, font-size .2s, background-color .2s;
+        z-index: 2; }
     body form .input-field.text-area {
       border-width: 1px 2px 3px 2px;
       border-radius: 7px 16px 16px 16px/7px 2px 15px 3px; }
@@ -6036,6 +6087,9 @@ footer.page-footer {
 #checkout-wrapper .address-list input[type="radio"][value="user-address"] + label {
   margin-bottom: 20px; }
 
+#checkout-wrapper table td {
+  line-height: 40px; }
+
 #checkout-wrapper .mdi.mdi-delete {
   font-size: 21px; }
 
@@ -6136,23 +6190,11 @@ footer.page-footer {
     pointer-events: all;
     transform: translateY(0); }
 
-#account .history {
-  border-spacing: 0;
-  width: 100%; }
-  #account .history th {
-    text-align: left;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #777;
-    border-bottom: 1px solid #ccc; }
-  #account .history td {
-    border-collapse: collapse;
-    border: 0;
-    line-height: 2rem; }
-  #account .history > tbody > tr {
-    cursor: pointer; }
-    #account .history > tbody > tr:nth-child(4n + 1) {
-      background: #eeeeee; }
+#account table > tbody > tr:nth-child(2n + 1) {
+  background: transparent; }
+
+#account table > tbody > tr:nth-child(4n + 1) {
+  background: #eee; }
 
 #account .subtable-wrapper {
   display: none; }

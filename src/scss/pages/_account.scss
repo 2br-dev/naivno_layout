@@ -86,33 +86,19 @@
         }
     }
 
-    & .history{
+    & table{
 
-        border-spacing: 0;
-        width: 100%;
-
-        & th{
-            text-align: left;
-            font-size: 12px;
-            text-transform: uppercase;
-            color: #777;
-            border-bottom: 1px solid #ccc;
-        }
-
-        & td{
-            border-collapse: collapse;
-            border: 0;
-            line-height: 2rem;
-        }
 
         & > tbody{
 
             & > tr{
 
-                cursor: pointer;
+                &:nth-child(2n + 1){
+                    background: transparent;
+                }
 
                 &:nth-child(4n + 1){
-                    background: #eeeeee;
+                    background: #eee;
                 }
             }
         }

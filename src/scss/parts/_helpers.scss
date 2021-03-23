@@ -217,6 +217,38 @@ body{
 		}
 	}
 
+	& table{
+
+        border-spacing: 0;
+        width: 100%;
+
+        & th{
+            text-align: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #777;
+            border-bottom: 1px solid #ccc;
+        }
+
+        & td{
+            border-collapse: collapse;
+            border: 0;
+            line-height: 2rem;
+        }
+
+        & > tbody{
+
+            & > tr{
+
+                cursor: pointer;
+
+                &:nth-child(2n + 1){
+                    background: #eeeeee;
+                }
+            }
+        }
+    }
+
 	& form{
 
 		& .input-field{
@@ -228,6 +260,8 @@ body{
 			border-color: #aaa;
 			border-style: solid;
 			margin-bottom: 20px;
+			margin-top: 20px;
+			position: relative;
 
 			& input[type="text"], 
 			& input[type="phone"],
@@ -243,10 +277,31 @@ body{
 				// color: #fff;
 				border-color: #fff;
 				border-style: solid;
-
+				position: relative;
+				z-index: 3;
 
 				&:focus{
 					outline: none;
+				}
+
+				&:focus ~ label, &:not(:placeholder-shown) ~ label{
+					font-size: 12px;
+					top: -15px;
+				}
+
+				&::placeholder{
+					color: transparent;
+				}
+
+				& ~ label{
+					position: absolute;
+					text-shadow: 0 0 2px $paper;
+					padding: 0 5px;
+					pointer-events: none;
+					top: 4px;
+					background: $paper;
+					transition: top .2s, font-size .2s, background-color .2s;
+					z-index: 2;
 				}
 			}
 
