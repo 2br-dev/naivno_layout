@@ -11,7 +11,7 @@
 	border-radius:7px 16px 16px 16px/7px 2px 15px 3px;
     
 
-    &.shown{
+    &.shown.visible{
         top: 0;
     }
 
@@ -21,21 +21,8 @@
         box-shadow: none;
         top: 16px;
 
-        &.shown{
+        &.shown.visible{
             top: 16px;
-        }
-    }
-
-    &.empty{
-
-        pointer-events: none;
-
-        & .floating-cart-empty-content{
-            display: block;
-        }
-
-        & .floating-cart-content{
-            display: none;
         }
     }
 
