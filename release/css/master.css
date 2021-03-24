@@ -5480,7 +5480,9 @@ footer.page-footer {
   padding: 10px 20px;
   top: -60px;
   transition: top .4s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-width: 1px 2px 3px 2px;
+  border-radius: 7px 16px 16px 16px/7px 2px 15px 3px; }
   .floating-cart.shown {
     top: 0; }
   @media (max-width: 600px) {
