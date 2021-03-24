@@ -13,6 +13,7 @@ $(() => {
 	$('body').on('click', '.tree-trigger', toggleTree);
 	$('body').on('click', clickOutside);
 	$(window).on('resize', updateAuthorPopup);
+	$(window).on('scroll', updateFloatingCart);
 	$('html, body').on('mousewheel', updateTreeTrigger);
 	$('body').on('click', '.dropdown-container .current', openDropdown);
 	$('body').on('click', '.dropdown-container .popup a', setCurrent);
@@ -48,6 +49,13 @@ $(() => {
 });
 
 // MISC FUNCTIONS ======================================
+function updateFloatingCart(){
+    if($('html, body').scrollTop() >= 50){
+        $('.floating-cart').addClass('shown');
+    }else{
+        $('.floating-cart').removeClass('shown');
+    }
+}
 function toggleGroup(e){
 	var group = $(this).data('target');
 	$('[data-group="'+group+'"]').toggleClass('visible');

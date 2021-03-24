@@ -1,0 +1,31 @@
+.floating-cart{
+    position: fixed;
+    right: 20px;
+    z-index: 200;
+    background: #fff;
+    padding: 10px 20px;
+    top: -60px;
+    transition: top .4s;
+    box-shadow: 0 1px 3px rgba(black, .2);
+
+    &.shown{
+        top: 0;
+    }
+
+    &.empty{
+
+        pointer-events: none;
+
+        & .floating-cart-empty-content{
+            display: block;
+        }
+
+        & .floating-cart-content{
+            display: none;
+        }
+    }
+
+    & .floating-cart-empty-content{
+        display: none;
+    }
+}

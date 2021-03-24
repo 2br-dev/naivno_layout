@@ -1,0 +1,19 @@
+.floating-cart {
+  position: fixed;
+  right: 20px;
+  z-index: 200;
+  background: #fff;
+  padding: 10px 20px;
+  top: -60px;
+  transition: top .4s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .floating-cart.shown {
+    top: 0; }
+  .floating-cart.empty {
+    pointer-events: none; }
+    .floating-cart.empty .floating-cart-empty-content {
+      display: block; }
+    .floating-cart.empty .floating-cart-content {
+      display: none; }
+  .floating-cart .floating-cart-empty-content {
+    display: none; }
