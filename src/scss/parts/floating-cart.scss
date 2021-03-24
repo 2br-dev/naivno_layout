@@ -12,6 +12,17 @@
         top: 0;
     }
 
+    @media(max-width: 600px){
+
+        right: 120px;
+        box-shadow: none;
+        top: 16px;
+
+        &.shown{
+            top: 16px;
+        }
+    }
+
     &.empty{
 
         pointer-events: none;
