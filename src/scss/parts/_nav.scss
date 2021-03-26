@@ -3,6 +3,7 @@ header{
 	background: #fff;
 
 	@media(max-width: 600px){
+		position: -webkit-sticky;
 		position: sticky;
 		top: 0;
 		box-shadow: 0 2px 6px rgba(black, .3);
