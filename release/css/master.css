@@ -4142,6 +4142,9 @@ header {
   @media (max-width: 600px) {
     header {
       position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
       position: sticky;
       top: 0;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
