@@ -4457,31 +4457,9 @@ footer.page-footer {
   .card.product-card .product-image {
     padding-bottom: 100%;
     background-color: #fff;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
     position: relative;
-    background-size: auto 90%; }
-    .card.product-card .product-image a {
-      border-bottom-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-      display: block;
-      height: 100%;
-      box-sizing: border-box;
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      background-color: rgba(148, 188, 221, 0.9);
-      color: #fff;
-      background-image: url(../img/product_link_arrow.svg);
-      background-repeat: no-repeat;
-      background-position: top calc(53% + 20px) center;
-      padding-top: calc(67% + 60px);
-      opacity: 0;
-      transition: opacity .2s, background-position .2s, padding-top .4s; }
-    .card.product-card .product-image:hover a {
-      background-position: top 43% center;
-      padding-top: 57%;
-      opacity: 1; }
+    background-size: auto 90%;
+    display: block; }
   .card.product-card .card-content {
     padding: 10px 20px; }
   .card.product-card .card-footer {
