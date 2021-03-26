@@ -124,6 +124,10 @@ function setCurrent(e){
 function clickOutside(e){
 	var path = e.originalEvent.path;
 
+	if(!e.originalEvent){
+		return;
+	}
+
 	// Close all dropdowns
 	var dropdowns = path.filter(selector => {
 		return $(selector).hasClass('dropdown-container');
