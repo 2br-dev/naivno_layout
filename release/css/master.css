@@ -4089,7 +4089,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button, a::-webkit-o
   color: #fff;
   padding: 5px 14px;
   font-family: 'Neucha';
-  filter: blur(0.3px);
   position: relative;
   font-family: Oswald;
   font-size: 18px;
@@ -4426,6 +4425,12 @@ footer.page-footer {
           display: block;
           line-height: 1.6rem;
           padding: 20px 0; } }
+    footer.page-footer .footer-copyright a {
+      white-space: nowrap; }
+      footer.page-footer .footer-copyright a b, footer.page-footer .footer-copyright a strong {
+        font-weight: 800; }
+      footer.page-footer .footer-copyright a:hover {
+        text-decoration: underline; }
 
 .breadcrumbs {
   line-height: 40px; }
@@ -5596,7 +5601,8 @@ footer.page-footer {
             bottom: 0;
             left: 0;
             z-index: 2;
-            background: linear-gradient(to top, #F5F5F5, transparent); }
+            background: linear-gradient(to top, #F5F5F5, transparent);
+            mix-blend-mode: screen; }
         #main #hero .swiper-container .swiper-slide .data {
           width: 100%; }
           #main #hero .swiper-container .swiper-slide .data .name, #main #hero .swiper-container .swiper-slide .data .sub {
@@ -5662,10 +5668,6 @@ footer.page-footer {
       transition: transform .4s, box-shadow .4s;
       text-align: center;
       display: block; }
-      #main #catalog .col .card:hover {
-        transform: rotatex(10deg) rotatey(-10deg) translatex(15px) translatez(120px);
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-        z-index: 20; }
       #main #catalog .col .card .link {
         font-family: 'Oswald';
         color: #ee6e73;

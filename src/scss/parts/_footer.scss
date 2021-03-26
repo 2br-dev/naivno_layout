@@ -81,5 +81,18 @@ footer.page-footer{
 			}
 		}
 
+		& a{
+
+			white-space: nowrap;
+
+			& b, & strong{
+				font-weight: 800;
+			}
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
 	}
 }
